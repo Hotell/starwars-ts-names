@@ -23,7 +23,6 @@ describe('starwars-names', () => {
     it('should return a random item from the starWars.all', () => {
       const randomItem = starWars.random()
       expect(starWars.all()).toContain(randomItem)
-      console.log(randomItem)
     })
 
     it('should return an array of random items if passed a number', () => {
