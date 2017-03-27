@@ -5,5 +5,11 @@
   "description": "Get random Star Wars names",
   "repository": "git@github.com:Hotell/starwars-ts-names.git",
   "author": "Martin Hochel <hochelmartin@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "tslint": "^4.5.1",
+    "tslint-config-standard": "^4.0.0",
+    "typescript": "^2.2.2",
+    "typescript-formatter": "^5.1.2"
+  }
 }
