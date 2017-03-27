@@ -23,11 +23,17 @@
     "ts:lint:fix": "npm run ts:lint -- --fix",
     "ts:format": "tsfmt --verify",
     "ts:format:fix": "tsfmt -r",
-    "verify": "npm run ts:style && npm t"
+    "verify": "npm run ts:style && npm t",
+    "commit": "git-cz",
+    "commitmsg": "validate-commit-msg",
+    "prepush": "npm run verify"
   },
   "devDependencies": {
     "@types/jest": "^19.2.2",
     "awesome-typescript-loader": "^3.1.2",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "husky": "^0.13.3",
     "jest": "^19.0.2",
     "shx": "^0.2.2",
     "ts-jest": "^19.0.6",
@@ -35,11 +41,21 @@
     "tslint-config-standard": "^4.0.0",
     "typescript": "^2.2.2",
     "typescript-formatter": "^5.1.2",
+    "validate-commit-msg": "^2.11.2",
     "webpack": "^2.3.2"
   },
   "dependencies": {
     "@types/lodash": "^4.14.58",
     "lodash": "^4.17.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "validate-commit-msg": {
+      "types": "conventional-commit-types",
+      "maxSubjectLength": 120
+    }
   },
   "jest": {
     "globals": {
