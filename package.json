@@ -1,0 +1,9 @@
+{
+  "name": "starwars-ts-names",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Get random Star Wars names",
+  "repository": "git@github.com:Hotell/starwars-ts-names.git",
+  "author": "Martin Hochel <hochelmartin@gmail.com>",
+  "license": "MIT"
+}
