@@ -1,5 +1,2 @@
-function helloWorld() {
-  console.log('hello world')
-}
-
-helloWorld()
+export * from './random';
+export * from './all';
