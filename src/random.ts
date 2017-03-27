@@ -1,7 +1,7 @@
 import { sampleSize } from 'lodash'
 import { SW_NAMES } from './sw-names'
 
-const getRandomItem = (count) => {
+const getRandomItem = (count = 0) => {
   const returnArray = count > 1
   const randomName = sampleSize(SW_NAMES, count)
   return returnArray ? randomName : randomName[0]
