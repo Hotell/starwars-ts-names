@@ -26,7 +26,13 @@
     "verify": "npm run ts:style && npm t",
     "commit": "git-cz",
     "commitmsg": "validate-commit-msg",
-    "prepush": "npm run verify"
+    "prepush": "npm run verify",
+    "prerelase": "npm run build",
+    "release": "npm run release:local",
+    "postrelease": "npm run release:github && npm run release:npm",
+    "release:local": "standard-version",
+    "release:github": "git push --no-verify --follow-tags origin master",
+    "release:npm": "npm publish"
   },
   "devDependencies": {
     "@types/jest": "^19.2.2",
@@ -36,6 +42,7 @@
     "husky": "^0.13.3",
     "jest": "^19.0.2",
     "shx": "^0.2.2",
+    "standard-version": "^4.0.0",
     "ts-jest": "^19.0.6",
     "tslint": "^4.5.1",
     "tslint-config-standard": "^4.0.0",
